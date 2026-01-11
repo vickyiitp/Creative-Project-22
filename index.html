@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="canonical" href="https://vickyiitp.tech/load-balancer-pro" />
+    
+    <!-- SEO & Meta Tags -->
+    <title>Load Balancer Pro | Play Online | Vicky Kumar (vickyiitp)</title>
+    <meta name="description" content="Play Load Balancer Pro, a high-fidelity cloud infrastructure simulation game developed by Vicky Kumar (vickyiitp). Manage traffic, upgrade servers, and prevent system failure." />
+    <meta name="keywords" content="Vicky Kumar, vickyiitp, AI developer, IIT Patna, 100 games, web apps, devil labs, Load Balancer Pro, system design game, browser game" />
+    <meta name="author" content="Vicky Kumar" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vickyiitp.tech/load-balancer-pro" />
+    <meta property="og:title" content="Load Balancer Pro - Developed by Vicky Kumar" />
+    <meta property="og:description" content="Route packets, manage heat, and scale your infrastructure in this addictive browser game by vickyiitp." />
+    <meta property="og:image" content="https://vickyiitp.tech/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://x.com/vickyiitp" />
+    <meta property="twitter:title" content="Load Balancer Pro - Developed by Vicky Kumar" />
+    <meta property="twitter:description" content="Route packets, manage heat, and scale your infrastructure in this addictive browser game by vickyiitp." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Orbitron', 'monospace'],
+            },
+            colors: {
+              server: {
+                bg: '#0f172a',
+                panel: '#1e293b',
+                accent: '#38bdf8',
+                danger: '#ef4444',
+                success: '#22c55e',
+                warning: '#f59e0b',
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'slide-in': 'slideIn 0.3s ease-out forwards',
+              'spin-slow': 'spin 3s linear infinite',
+              'glitch': 'glitch 1s linear infinite',
+              'scan': 'scan 2s linear infinite',
+            },
+            keyframes: {
+              glow: {
+                '0%': { boxShadow: '0 0 5px #38bdf8' },
+                '100%': { boxShadow: '0 0 20px #38bdf8, 0 0 10px #38bdf8' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideIn: {
+                '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              glitch: {
+                '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
+                '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
+                '62%': { transform: 'translate(0,0) skew(5deg)' },
+              },
+              scan: {
+                '0%': { backgroundPosition: '0% 0%' },
+                '100%': { backgroundPosition: '0% 100%' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #0f172a;
+        color: white;
+        overflow-x: hidden;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      /* Cyber Grid Background */
+      .cyber-grid-bg {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+        border: 1px solid #0f172a;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #38bdf8; 
+      }
+      /* Disable selection in game */
+      .game-container {
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: none;
+      }
+      
+      .text-glow {
+        text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+      }
+    </style>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Load Balancer Pro",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Browser",
+      "author": {
+        "@type": "Person",
+        "name": "Vicky Kumar",
+        "url": "https://vickyiitp.tech",
+        "sameAs": [
+          "https://youtube.com/@vickyiitp",
+          "https://linkedin.com/in/vickyiitp",
+          "https://x.com/vickyiitp",
+          "https://github.com/vickyiitp",
+          "https://instagram.com/vickyiitp"
+        ]
+      },
+      "description": "A high-fidelity cloud infrastructure simulation game. Route packets, manage server heat, and prevent system failure.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
